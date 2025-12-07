@@ -1,0 +1,3 @@
+/home/luka/LS2K0300_Library/luka/project/out/CMakeFiles/project.dir
+/home/luka/LS2K0300_Library/luka/project/out/CMakeFiles/edit_cache.dir
+/home/luka/LS2K0300_Library/luka/project/out/CMakeFiles/rebuild_cache.dir
