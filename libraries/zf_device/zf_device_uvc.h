@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #ifndef _zf_driver_uvc_h
 #define _zf_driver_uvc_h
 
@@ -14,3 +15,5 @@ int8 wait_image_refresh();
 
 extern uint8_t *rgay_image;
 #endif
+=======
+>>>>>>> 6680572 (12.8 完成摄像头初始化)

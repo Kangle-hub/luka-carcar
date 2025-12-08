@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #include "zf_device_uvc.h"
 
 
@@ -75,3 +76,5 @@ int8 wait_image_refresh()
 
 
 
+=======
+>>>>>>> 6680572 (12.8 完成摄像头初始化)

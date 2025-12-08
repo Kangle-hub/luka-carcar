@@ -1,6 +1,7 @@
-CMakeFiles/project.dir/main.cpp.o: \
- /home/luka/桌面/Che_Sai/project/user/main.cpp \
+CMakeFiles/project.dir/home/luka/桌面/Che_Sai/project/code/my_uvc.cpp.o: \
+ /home/luka/桌面/Che_Sai/project/code/my_uvc.cpp \
  /opt/ls_2k0300_env/loongson-gnu-toolchain-8.3-x86_64-loongarch64-linux-gnu-rc1.6/loongarch64-linux-gnu/sysroot/usr/include/stdc-predef.h \
+ /home/luka/桌面/Che_Sai/project/code/my_uvc.h \
  /home/luka/桌面/Che_Sai/project/user/../../libraries/zf_common/zf_common_headfile.h \
  /opt/ls_2k0300_env/loongson-gnu-toolchain-8.3-x86_64-loongarch64-linux-gnu-rc1.6/loongarch64-linux-gnu/sysroot/usr/include/stdio.h \
  /opt/ls_2k0300_env/loongson-gnu-toolchain-8.3-x86_64-loongarch64-linux-gnu-rc1.6/loongarch64-linux-gnu/sysroot/usr/include/bits/libc-header-start.h \
@@ -303,7 +304,6 @@ CMakeFiles/project.dir/main.cpp.o: \
  /home/luka/桌面/Che_Sai/project/user/../../libraries/zf_device/zf_device_imu963ra.h \
  /home/luka/桌面/Che_Sai/project/user/../../libraries/zf_components/seekfree_assistant.h \
  /home/luka/桌面/Che_Sai/project/user/../../libraries/zf_components/seekfree_assistant_interface.h \
- /home/luka/桌面/Che_Sai/project/user/../code/my_uvc.h \
  /opt/ls_2k0300_env/opencv_4_10_build/include/opencv4/opencv2/opencv.hpp \
  /opt/ls_2k0300_env/opencv_4_10_build/include/opencv4/opencv2/opencv_modules.hpp \
  /opt/ls_2k0300_env/opencv_4_10_build/include/opencv4/opencv2/core.hpp \
