@@ -6,9 +6,5 @@ int main(int, char **)
     while (1)
     {
         
-
-
-        
     }
-
 }   
