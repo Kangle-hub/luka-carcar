@@ -14,6 +14,7 @@ float thresh;
 float bin_offset = 1.1;  // 二值化偏移量
 uint8_t* gray_image;     // 指向图片数据的指针
 
+int32 realfps = 0;
 
 int8 my_uvc_camera_init(const char *path)
 {
@@ -209,7 +210,7 @@ int8 wait_image_refresh()
         return -1;
     }
 
-    //calculateFPS();
+    calculateFPS();
 
     // rgb转灰度
     cv::cvtColor(frame, frame_gray, cv::COLOR_BGR2GRAY);
@@ -255,4 +256,25 @@ int8 wait_image_refresh()
     gray_image = reinterpret_cast<uint8_t *>(binary.ptr(0));
 
     return 0;
+}
+
+void calculateFPS(void)
+{
+    // 静态变量保持计算状态
+    static int frame_counter = 0;
+    static double start_time = static_cast<double>(getTickCount());
+
+    // 每帧递增计数器
+    frame_counter++;
+
+    // 计算经过时间（秒）
+    double elapsed = (getTickCount() - start_time) / getTickFrequency();
+
+    // 每满1秒更新全局FPS
+    if (elapsed >= 1.0)
+    {
+        realfps = frame_counter / elapsed; // 计算实际FPS
+        frame_counter = 0;                 // 重置计数器
+        start_time = getTickCount();       // 重置时间戳
+    }
 }
