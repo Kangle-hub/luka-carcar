@@ -1,3 +1,3 @@
-/home/luka/桌面/Che_Sai/project/out/CMakeFiles/project.dir
-/home/luka/桌面/Che_Sai/project/out/CMakeFiles/edit_cache.dir
-/home/luka/桌面/Che_Sai/project/out/CMakeFiles/rebuild_cache.dir
+/home/luka/桌面/Che_Sai/luka-carcar/project/out/CMakeFiles/project.dir
+/home/luka/桌面/Che_Sai/luka-carcar/project/out/CMakeFiles/edit_cache.dir
+/home/luka/桌面/Che_Sai/luka-carcar/project/out/CMakeFiles/rebuild_cache.dir

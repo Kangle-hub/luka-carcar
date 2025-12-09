@@ -1,4 +1,4 @@
-# Install script for directory: /home/luka/桌面/Che_Sai/project/user
+# Install script for directory: /home/luka/桌面/Che_Sai/luka-carcar/project/user
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/luka/桌面/Che_Sai/project/out/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/luka/桌面/Che_Sai/luka-carcar/project/out/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

@@ -1,8 +1,8 @@
-CMakeFiles/project.dir/home/luka/桌面/Che_Sai/libraries/zf_common/zf_common_font.cpp.o: \
- /home/luka/桌面/Che_Sai/libraries/zf_common/zf_common_font.cpp \
+CMakeFiles/project.dir/home/luka/桌面/Che_Sai/luka-carcar/libraries/zf_device/zf_device_ips200_fb.cpp.o: \
+ /home/luka/桌面/Che_Sai/luka-carcar/libraries/zf_device/zf_device_ips200_fb.cpp \
  /opt/ls_2k0300_env/loongson-gnu-toolchain-8.3-x86_64-loongarch64-linux-gnu-rc1.6/loongarch64-linux-gnu/sysroot/usr/include/stdc-predef.h \
- /home/luka/桌面/Che_Sai/libraries/zf_common/zf_common_font.h \
- /home/luka/桌面/Che_Sai/libraries/zf_common/zf_common_typedef.h \
+ /home/luka/桌面/Che_Sai/luka-carcar/libraries/zf_device/zf_device_ips200_fb.h \
+ /home/luka/桌面/Che_Sai/luka-carcar/project/user/../../libraries/zf_common/zf_common_typedef.h \
  /opt/ls_2k0300_env/loongson-gnu-toolchain-8.3-x86_64-loongarch64-linux-gnu-rc1.6/lib/gcc/loongarch64-linux-gnu/8.3.0/include/stdint.h \
  /opt/ls_2k0300_env/loongson-gnu-toolchain-8.3-x86_64-loongarch64-linux-gnu-rc1.6/loongarch64-linux-gnu/sysroot/usr/include/stdint.h \
  /opt/ls_2k0300_env/loongson-gnu-toolchain-8.3-x86_64-loongarch64-linux-gnu-rc1.6/loongarch64-linux-gnu/sysroot/usr/include/bits/libc-header-start.h \
@@ -124,4 +124,7 @@ CMakeFiles/project.dir/home/luka/桌面/Che_Sai/libraries/zf_common/zf_common_fo
  /opt/ls_2k0300_env/loongson-gnu-toolchain-8.3-x86_64-loongarch64-linux-gnu-rc1.6/loongarch64-linux-gnu/sysroot/usr/include/alloca.h \
  /opt/ls_2k0300_env/loongson-gnu-toolchain-8.3-x86_64-loongarch64-linux-gnu-rc1.6/loongarch64-linux-gnu/sysroot/usr/include/bits/stdlib-bsearch.h \
  /opt/ls_2k0300_env/loongson-gnu-toolchain-8.3-x86_64-loongarch64-linux-gnu-rc1.6/loongarch64-linux-gnu/sysroot/usr/include/bits/stdlib-float.h \
- /opt/ls_2k0300_env/loongson-gnu-toolchain-8.3-x86_64-loongarch64-linux-gnu-rc1.6/loongarch64-linux-gnu/sysroot/usr/include/c++/8.3.0/bits/std_abs.h
+ /opt/ls_2k0300_env/loongson-gnu-toolchain-8.3-x86_64-loongarch64-linux-gnu-rc1.6/loongarch64-linux-gnu/sysroot/usr/include/c++/8.3.0/bits/std_abs.h \
+ /home/luka/桌面/Che_Sai/luka-carcar/project/user/../../libraries/zf_common/zf_common_font.h \
+ /home/luka/桌面/Che_Sai/luka-carcar/project/user/../../libraries/zf_common/zf_common_typedef.h \
+ /home/luka/桌面/Che_Sai/luka-carcar/project/user/../../libraries/zf_common/zf_common_function.h

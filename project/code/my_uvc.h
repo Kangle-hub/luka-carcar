@@ -1,4 +1,4 @@
-#include "zf_common_headfile.h"
+#include "zf_common_headfile.h" 
 #include <iostream>
 #include <vector>
 using namespace std;
@@ -11,4 +11,6 @@ int8 my_uvc_camera_init(const char *path);
 //此处参数需要根据摄像头更改
 #define UVC_WIDTHRAW  160   
 #define UVC_HEIGHTRAW 120   
-#define UVC_FPSRAW    120  
+#define UVC_FPSRAW    120 
+
+int8 wait_image_refresh();

@@ -5,6 +5,16 @@ cv::Mat M;
 cv::Mat static_mask;
 cv::Size targetSize(160, 120);
 
+cv::Mat frame;           // 原始彩色帧
+cv::Mat frame_gray;      // 构建opencv对象 灰度
+cv::Mat frame_flat;
+cv::Mat Oribinary;
+cv::Mat binary;
+float thresh;
+float bin_offset = 1.1;  // 二值化偏移量
+uint8_t* gray_image;     // 指向图片数据的指针
+
+
 int8 my_uvc_camera_init(const char *path)
 {
     cap.open(path);
@@ -175,6 +185,74 @@ int8 my_uvc_camera_init(const char *path)
 
     cv::fillPoly(static_mask, triangles, cv::Scalar(255));
 
-    //wait_image_refresh();
+    wait_image_refresh();
+    return 0;
+}
+
+int8 wait_image_refresh()
+{
+    try
+    {
+        // 阻塞式等待图像刷新
+        cap >> frame;
+        if (frame.empty())
+        {
+            std::cerr << "未获取到有效图像帧" << std::endl;
+            printf("没读到\n");
+            return -1;
+        }
+    }
+    catch (const cv::Exception &e)
+    {
+        std::cerr << "OpenCV 异常: " << e.what() << std::endl;
+        printf("opencv坏了\n");
+        return -1;
+    }
+
+    //calculateFPS();
+
+    // rgb转灰度
+    cv::cvtColor(frame, frame_gray, cv::COLOR_BGR2GRAY);
+
+    cv::flip(frame_gray, frame_gray, -1);
+
+/*  后面用重映射再说
+    // 单次重映射完成所有处理
+    if (remap_mode == 0)
+    {
+        cv::remap(frame_rgay, frame_flat, combined_map_x, combined_map_y,
+                  cv::INTER_LINEAR, cv::BORDER_CONSTANT, cv::Scalar(0, 0, 0));
+    }
+    else
+    {
+        cv::remap(frame_rgay, frame_flat, combined_map_x_fan, combined_map_y_fan,
+                  cv::INTER_LINEAR, cv::BORDER_CONSTANT, cv::Scalar(0, 0, 0));
+    }
+*/
+
+    // 应用双三角形遮罩
+    frame_flat.setTo(cv::Scalar(85), static_mask);
+
+    thresh = cv::threshold(frame_gray, Oribinary, 0, 255, cv::THRESH_OTSU);
+    printf("thresh  %f\n", thresh);
+
+    // 用偏移后的阈值分别对两个图像进行二值化
+    cv::threshold(frame_gray, Oribinary, thresh * bin_offset, 255, cv::THRESH_BINARY);
+    cv::threshold(frame_flat, binary, thresh * bin_offset, 255, cv::THRESH_BINARY);
+
+    // 将Oribinary的下半部分全部变成纯白
+    Oribinary.rowRange(70, Oribinary.rows).setTo(255);
+
+    // 在底部中间添加14x6白色遮罩还有三角遮罩
+    int mask_width = 26;
+    int mask_height = 9;
+    int x = (frame_flat.cols - mask_width) / 2;
+    int y = frame_flat.rows - mask_height;
+    cv::rectangle(binary, cv::Rect(x, y, mask_width, mask_height), cv::Scalar(255), cv::FILLED);
+    binary.setTo(cv::Scalar(85), static_mask);
+
+    // cv对象转指针
+    gray_image = reinterpret_cast<uint8_t *>(binary.ptr(0));
+
     return 0;
 }
