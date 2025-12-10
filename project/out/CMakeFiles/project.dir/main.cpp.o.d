@@ -303,6 +303,7 @@ CMakeFiles/project.dir/main.cpp.o: \
  /home/luka/桌面/Che_Sai/luka-carcar/project/user/../../libraries/zf_device/zf_device_imu963ra.h \
  /home/luka/桌面/Che_Sai/luka-carcar/project/user/../../libraries/zf_components/seekfree_assistant.h \
  /home/luka/桌面/Che_Sai/luka-carcar/project/user/../../libraries/zf_components/seekfree_assistant_interface.h \
+ /home/luka/桌面/Che_Sai/luka-carcar/project/user/../code/dirs.h \
  /home/luka/桌面/Che_Sai/luka-carcar/project/user/../code/my_uvc.h \
  /opt/ls_2k0300_env/opencv_4_10_build/include/opencv4/opencv2/opencv.hpp \
  /opt/ls_2k0300_env/opencv_4_10_build/include/opencv4/opencv2/opencv_modules.hpp \

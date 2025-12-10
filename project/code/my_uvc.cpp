@@ -278,3 +278,63 @@ void calculateFPS(void)
         start_time = getTickCount();       // 重置时间戳
     }
 }
+
+int countCenterWhitePixels(const cv::Mat &img)
+{
+    // 验证输入图像属性
+    if (img.empty() ||
+        img.cols != 160 ||
+        img.rows != 120 ||
+        img.type() != CV_8UC1)
+    {
+        return -1; // 无效输入
+    }
+
+    const int target_row = 118; // 第111行（0-based索引）
+    const int center_col = 80;  // 中心列索引（160宽度中心点）
+
+    // 检查起始点像素值（中心点）
+    if (img.at<uchar>(target_row, center_col) != 255)
+    {
+        return 0; // 中心点非白直接返回0
+    }
+
+    int left_count = 0;
+    int right_count = 0;
+
+    // 向左扫描（包含中心点）
+    for (int col = center_col; col >= 0; --col)
+    {
+        if (img.at<uchar>(target_row, col) == 255)
+        {
+            left_count++;
+        }
+        else
+        {
+            break; // 遇到黑色立即停止
+        }
+    }
+
+    // 向右扫描（不包含中心点，避免重复计数）
+    for (int col = center_col + 1; col < img.cols; ++col)
+    {
+        if (img.at<uchar>(target_row, col) == 255)
+        {
+            right_count++;
+        }
+        else
+        {
+            break; // 遇到黑色立即停止
+        }
+    }
+
+    return left_count + right_count; // 总连续白色像素数
+}
+
+cv::Mat smooth_edges_gaussian(cv::Mat binary, int kernel_size, double sigma)
+{
+    cv::Mat blurred;
+    cv::GaussianBlur(binary, blurred, cv::Size(kernel_size, kernel_size), sigma);
+    
+    return blurred;
+}

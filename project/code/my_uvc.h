@@ -1,3 +1,6 @@
+#ifndef MY_UVC_H
+#define MY_UVC_H
+
 #include "zf_common_headfile.h" 
 #include <iostream>
 #include <vector>
@@ -14,3 +17,11 @@ int8 my_uvc_camera_init(const char *path);
 #define UVC_FPSRAW    120 
 
 int8 wait_image_refresh();
+
+void calculateFPS(void);
+
+int countCenterWhitePixels(const cv::Mat &img);
+
+cv::Mat smooth_edges_gaussian(cv::Mat binary, int kernel_size, double sigma);
+
+#endif
