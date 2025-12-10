@@ -24,8 +24,7 @@ int main(int, char**)
 {
     while(1)
     {
-        pwm_set_duty(PWM_1,2000);
-        pwm_set_duty(PWM_2,2000);
+
     }
     
 }
