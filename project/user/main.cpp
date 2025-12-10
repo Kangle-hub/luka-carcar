@@ -22,10 +22,9 @@ void sigint_handler(int signum)
 
 int main(int, char**) 
 {
-
-
     while(1)
     {
+        
     }
     
 }
