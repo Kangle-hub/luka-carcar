@@ -1,6 +1,8 @@
 #include "zf_common_headfile.h"
 #include "dirs.h"
 #include "my_uvc.h"
+#include "filter.h"
+
 
 void sigint_handler(int signum)
 {
